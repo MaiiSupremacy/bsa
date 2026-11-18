@@ -1,0 +1,928 @@
+/* Canonical verified dataset for Portal Bendungan Selorejo — Perum Jasa Tirta I.
+ * Every route, Drive ID, Google Sheets pubchart OID, Maps pin, and Control House URL
+ * matches the verified live crawl of sites.google.com/view/bendunganselorejo and official assets.
+ */
+
+window.SELOREJO_DATA = {
+  siteName: 'Bendungan Selorejo',
+  operator: 'Perum Jasa Tirta I · Unit Pengelola Bendungan Selorejo',
+  whatsappUrl: 'https://kirimwa.id/bendunganselorejo',
+  mapsUrl: 'https://maps.app.goo.gl/9hPLw77UhHf7iAch9',
+  mapsCoords: { lat: -7.8737944, lng: 112.3563645, text: '-7.8737944, 112.3563645' },
+  myMapsViewerUrl: 'https://www.google.com/maps/d/viewer?mid=179tPbIwEot-MiFDfgrC6FvGoyyAxqzw&ll=-7.72312594203711%2C112.28342949999998&z=11',
+  myMapsEmbedUrl: 'https://www.google.com/maps/d/embed?mid=179tPbIwEot-MiFDfgrC6FvGoyyAxqzw&ll=-7.72312594203711%2C112.28342949999998&z=11',
+  mapsEmbedUrl: 'https://maps.google.com/maps?q=-7.8737944,112.3563645&z=15&output=embed',
+  pubcharts: {
+    elevasi: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQPKIL7qBY67vuCcVwwawzu-XxY9YuSzoo5dw7cUsAkbxh7iYbW3CPWR4bSqC5IE2ENtJuODmp-O8vv/pubchart?oid=857488794&format=interactive',
+    dashboard: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQPKIL7qBY67vuCcVwwawzu-XxY9YuSzoo5dw7cUsAkbxh7iYbW3CPWR4bSqC5IE2ENtJuODmp-O8vv/pubchart?oid=1121470195&format=interactive'
+  },
+  pages: [
+    {
+      slug: '',
+      title: 'Beranda',
+      desc: 'Portal informasi operasional, lokasi, layanan utama, dan akses cepat Bendungan Selorejo.',
+      tags: ['beranda', 'utama', 'selamat datang', 'lokasi', 'control house']
+    },
+    {
+      slug: 'alokasi-air',
+      title: 'Alokasi Air',
+      desc: 'Penentuan penggunaan air berbasis RTOW, Grafik Real vs RTOW, Kurva H - V, LHO 2022–2026, serta embed dashboard monitoring.',
+      tags: ['alokasi air', 'rtow', 'lho', 'kurva h-v', 'elevasi', 'monitoring', 'pubchart']
+    },
+    {
+      slug: 'keamanan-tubuh-bendungan',
+      title: 'Keamanan Tubuh Bendungan',
+      desc: 'Pemantauan instrumentasi struktur, rembesan, deformasi, tekanan air pori, pemeriksaan berkala, dan evaluasi keamanan.',
+      tags: ['ktb', 'deformasi', 'instrumentasi', 'keamanan', 'rembesan', 'evaluasi']
+    },
+    {
+      slug: 'hydro-mechanical-electrical',
+      title: 'Hydro Mechanical Electrical',
+      desc: 'Peralatan hidromekanik dan elektrikal pintu spillway beserta laporan pemeriksaan dan perawatan berkala.',
+      tags: ['hme', 'hydro mechanical electrical', 'spillway', 'pemeriksaan', 'perawatan']
+    },
+    {
+      slug: 'data-teknis',
+      title: 'Data Teknis & Pedoman',
+      desc: 'Spesifikasi Bendungan Selorejo, POPM, Pedoman Siaga Banjir, Leaflet I & II, Dokumen Teknis, Surat Izin Operasi, dan Struktur UPB.',
+      tags: ['data teknis', 'popm', 'siaga banjir', 'leaflet', 'sio', 'struktur upb', 'kapasitas']
+    },
+    {
+      slug: 'kalibrasi',
+      title: 'Kalibrasi',
+      desc: 'Dokumentasi laporan kalibrasi alat ukur tahun 2025 dan 2026 untuk akurasi pengukuran standar.',
+      tags: ['kalibrasi', 'alat ukur', '2025', '2026']
+    },
+    {
+      slug: 'dokumentasi',
+      title: 'Dokumentasi',
+      desc: 'Kumpulan dokumentasi foto udara (File Drone), rekaman lapangan (File Video), dan galeri Waduk Selorejo.',
+      tags: ['dokumentasi', 'drone', 'video', 'foto', 'galeri']
+    },
+    {
+      slug: 'inventarisasi-tanggul-kritis-dan-prasarana-sda',
+      title: 'Inventarisasi Tanggul Kritis & Prasarana SDA',
+      desc: 'Pemetaan dan pendataan kondisi tanggul kritis serta prasarana sumber daya air.',
+      tags: ['tanggul kritis', 'inventarisasi', 'prasarana sda']
+    },
+    {
+      slug: 'identifikasi-longsoran-dan-tanggul-kritis-pasca-banjir',
+      title: 'Identifikasi Longsoran & Tanggul Kritis Pasca Banjir',
+      desc: 'Laporan hasil identifikasi titik longsoran dan kerawanan tanggul setelah kejadian banjir.',
+      tags: ['longsoran', 'pasca banjir', 'tanggul kritis']
+    },
+    {
+      slug: 'peta-kami',
+      title: 'Peta & Lokasi',
+      desc: 'Peta interaktif lokasi Bendungan Selorejo (-7.8737944, 112.3563645) dan tautan Google My Maps mode baca-saja.',
+      tags: ['peta', 'lokasi', 'maps', 'my maps', 'ngantang', 'malang']
+    },
+    {
+      slug: 'kontak',
+      title: 'Hubungi Kami — Control House',
+      desc: 'Saluran WhatsApp resmi dan kode QR Control House Bendungan Selorejo.',
+      tags: ['kontak', 'control house', 'whatsapp', 'qr code', 'kirimwa']
+    },
+    {
+      slug: 'dokumen',
+      title: 'Direktori Dokumen',
+      desc: 'Katalog langsung seluruh berkas dan folder Google Drive resmi portal Bendungan Selorejo.',
+      tags: ['dokumen', 'katalog', 'drive', 'folder', 'unduh']
+    }
+  ],
+  documents: [
+    {
+      id: 'grafik-rtow',
+      title: 'Grafik Real Vs RTOW',
+      category: 'Alokasi Air & Operasi',
+      kind: 'Folder Google Drive',
+      desc: 'Rekapitulasi grafik realisasi elevasi waduk dibandingkan dengan Rencana Tahunan Operasi Waduk (RTOW).',
+      href: 'https://drive.google.com/drive/folders/1YSVfvNgppneZHLjDzRSqL9G2fhpkJM5w?usp=drive_link',
+      page: 'alokasi-air/'
+    },
+    {
+      id: 'kurva-hv',
+      title: 'Kurva H - V Bendungan Selorejo',
+      category: 'Alokasi Air & Operasi',
+      kind: 'Folder Google Drive',
+      desc: 'Kurva hubungan elevasi muka air (H) terhadap luas genangan dan volume tampungan (V).',
+      href: 'https://drive.google.com/drive/folders/1fiyzWedFn05uVWJu-CBBreVR6FXq5NXm?usp=sharing',
+      page: 'alokasi-air/'
+    },
+    {
+      id: 'lho-folder',
+      title: 'Folder Induk Laporan Harian Operasi (LHO)',
+      category: 'Alokasi Air & Operasi',
+      kind: 'Folder Google Drive',
+      desc: 'Direktori utama arsip Laporan Operasi Harian Waduk Selorejo.',
+      href: 'https://drive.google.com/drive/folders/1RLmiowkPC3hh_bGaByj58rmV_TVdFi4-?usp=drive_link',
+      page: 'alokasi-air/'
+    },
+    {
+      id: 'lho-2026',
+      title: 'Laporan Harian Operasi (LHO) 2026',
+      category: 'Alokasi Air & Operasi',
+      kind: 'Folder Google Drive',
+      desc: 'Catatan operasi harian waduk tahun berjalan 2026.',
+      href: 'https://drive.google.com/drive/folders/1O3fbwnmirW497Dp73pw4v_LesVDQIGQ5?usp=drive_link',
+      page: 'alokasi-air/'
+    },
+    {
+      id: 'lho-2025',
+      title: 'Laporan Harian Operasi (LHO) 2025',
+      category: 'Alokasi Air & Operasi',
+      kind: 'Folder Google Drive',
+      desc: 'Catatan operasi harian waduk tahun 2025.',
+      href: 'https://drive.google.com/drive/folders/1usQjZlRz6PnVY00EX8VNtFlaOD8aQX8t?usp=drive_link',
+      page: 'alokasi-air/'
+    },
+    {
+      id: 'lho-2024',
+      title: 'Laporan Harian Operasi (LHO) 2024',
+      category: 'Alokasi Air & Operasi',
+      kind: 'Berkas Google Drive',
+      desc: 'Arsip Laporan Operasi Harian Waduk tahun 2024.',
+      href: 'https://drive.google.com/file/d/104qcDhw7ZuW8RtBdSv5_3-PkQ-AIEeki/view?usp=drive_link',
+      page: 'alokasi-air/'
+    },
+    {
+      id: 'lho-2023',
+      title: 'Laporan Harian Operasi (LHO) 2023',
+      category: 'Alokasi Air & Operasi',
+      kind: 'Berkas Google Drive',
+      desc: 'Arsip Laporan Operasi Harian Waduk tahun 2023.',
+      href: 'https://drive.google.com/file/d/1S5Eytu9-jMgyMMfES01nVY-U3ffZEcNf/view?usp=drive_link',
+      page: 'alokasi-air/'
+    },
+    {
+      id: 'lho-2022',
+      title: 'Laporan Harian Operasi (LHO) 2022',
+      category: 'Alokasi Air & Operasi',
+      kind: 'Berkas Google Drive',
+      desc: 'Arsip Laporan Operasi Harian Waduk tahun 2022.',
+      href: 'https://drive.google.com/file/d/1m-jjzlmbqSo5ONvpmfg2LZNtPMRa18Kg/view?usp=drive_link',
+      page: 'alokasi-air/'
+    },
+    {
+      id: 'ktb-laporan',
+      title: 'Laporan Keamanan Tubuh Bendungan',
+      category: 'Keamanan Bendungan',
+      kind: 'Folder Google Drive',
+      desc: 'Laporan pemantauan instrumentasi struktur, rembesan, dan tekanan air pori.',
+      href: 'https://drive.google.com/drive/folders/1d0o83oRPW0gQjUDVWp_06vuTo9snXjoj?usp=drive_link',
+      page: 'keamanan-tubuh-bendungan/'
+    },
+    {
+      id: 'ktb-deformasi',
+      title: 'Laporan Deformasi',
+      category: 'Keamanan Bendungan',
+      kind: 'Folder Google Drive',
+      desc: 'Hasil pengukuran pergeseran dan deformasi tubuh bendungan.',
+      href: 'https://drive.google.com/drive/folders/1XHLmGmEfLqWxJ-5XFA7k8SzuAoyDkZM4?usp=drive_link',
+      page: 'keamanan-tubuh-bendungan/'
+    },
+    {
+      id: 'ktb-berkala',
+      title: 'Laporan Pemeriksaan Berkala',
+      category: 'Keamanan Bendungan',
+      kind: 'Folder Google Drive',
+      desc: 'Laporan pemeriksaan rutin kondisi fisik bendungan dan bangunan pelengkap.',
+      href: 'https://drive.google.com/drive/folders/1qtQxywG-faOJgqwhUElWLq-wC4eBkyCj?usp=drive_link',
+      page: 'keamanan-tubuh-bendungan/'
+    },
+    {
+      id: 'ktb-evaluasi',
+      title: 'Laporan Analisis dan Evaluasi Keamanan Bendungan',
+      category: 'Keamanan Bendungan',
+      kind: 'Folder Google Drive',
+      desc: 'Kajian teknis evaluasi keamanan dan perilaku struktur bendungan.',
+      href: 'https://drive.google.com/drive/folders/1ORsAEy-Bx8j5cJ5KLYSP0JORW5xTD1yW?usp=drive_link',
+      page: 'keamanan-tubuh-bendungan/'
+    },
+    {
+      id: 'hme-pemeriksaan',
+      title: 'Laporan Pemeriksaan Hydro Mechanical Electrical',
+      category: 'Hydro Mechanical Electrical',
+      kind: 'Folder Google Drive',
+      desc: 'Pemeriksaan peralatan mekanikal dan elektrikal pada pintu spillway dan instalasi terkait.',
+      href: 'https://drive.google.com/drive/folders/1Nl2xAksn9CU2wOtanZipbDhbPCPRfw2D?usp=drive_link',
+      page: 'hydro-mechanical-electrical/'
+    },
+    {
+      id: 'hme-perawatan',
+      title: 'Laporan Perawatan Hydro Mechanical Electrical',
+      category: 'Hydro Mechanical Electrical',
+      kind: 'Folder Google Drive',
+      desc: 'Catatan pemeliharaan peralatan hidromekanik dan elektrikal.',
+      href: 'https://drive.google.com/drive/folders/1ZQqinc5mKOBqCca5jyNIpQpv3_NzjUW6?usp=drive_link',
+      page: 'hydro-mechanical-electrical/'
+    },
+    {
+      id: 'dt-utama',
+      title: 'Data Teknis Bendungan Selorejo',
+      category: 'Data Teknis & Pedoman',
+      kind: 'Berkas Google Drive',
+      desc: 'Dokumen ringkasan spesifikasi dan data teknis perancangan Bendungan Selorejo.',
+      href: 'https://drive.google.com/file/d/1ERKQDFIgTTVOTpkrenOdDXRlNr1_oly4/view?usp=sharing',
+      page: 'data-teknis/'
+    },
+    {
+      id: 'dt-popm',
+      title: 'Pedoman Operasi dan Pemeliharaan (POPM)',
+      category: 'Data Teknis & Pedoman',
+      kind: 'Berkas Google Drive',
+      desc: 'Aturan, tata cara, serta panduan teknis pengelolaan, pengoperasian, dan pemeliharaan prasarana.',
+      href: 'https://drive.google.com/file/d/106MaPZ6hjxT1blbpzJ0moJX_B2VWuuR0/view?usp=drive_link',
+      page: 'data-teknis/'
+    },
+    {
+      id: 'dt-banjir',
+      title: 'Pedoman Siaga Banjir',
+      category: 'Data Teknis & Pedoman',
+      kind: 'Folder Google Drive',
+      desc: 'Panduan langkah kesiapsiagaan sebelum, saat, dan setelah kejadian banjir.',
+      href: 'https://drive.google.com/drive/folders/11jO8SQXF_s2IAvpFYEPfV5nzXupW634S?usp=drive_link',
+      page: 'data-teknis/'
+    },
+    {
+      id: 'dt-dokumen-teknis',
+      title: 'Dokumen Teknis (Folder)',
+      category: 'Data Teknis & Pedoman',
+      kind: 'Folder Google Drive',
+      desc: 'Kumpulan dokumen spesifikasi, fungsi, arsitektur, dan prosedur konstruksi proyek.',
+      href: 'https://drive.google.com/drive/folders/1L7PgPQI7Vs6W1k467bVITxFbkJ49Fn1j?usp=drive_link',
+      page: 'data-teknis/'
+    },
+    {
+      id: 'dt-leaflet-folder',
+      title: 'Leaflet Bendungan Selorejo (Folder)',
+      category: 'Data Teknis & Pedoman',
+      kind: 'Folder Google Drive',
+      desc: 'Direktori publikasi Leaflet I & Leaflet II profil Bendungan Selorejo.',
+      href: 'https://drive.google.com/drive/folders/1_nSPRVmPZk29nfQAAGr5NvgxW7IGkcRz?usp=drive_link',
+      page: 'data-teknis/'
+    },
+    {
+      id: 'dt-leaflet-1',
+      title: 'Leaflet I Bendungan Selorejo',
+      category: 'Data Teknis & Pedoman',
+      kind: 'Berkas Google Drive',
+      desc: 'Lembar informasi publikasi seri pertama Bendungan Selorejo.',
+      href: 'https://drive.google.com/file/d/1OTL2WrTB_jkBURTWr1yLLG5IZT9hu3pT/view?usp=drive_link',
+      page: 'data-teknis/'
+    },
+    {
+      id: 'dt-leaflet-2',
+      title: 'Leaflet II Bendungan Selorejo',
+      category: 'Data Teknis & Pedoman',
+      kind: 'Berkas Google Drive',
+      desc: 'Lembar informasi publikasi seri kedua Bendungan Selorejo.',
+      href: 'https://drive.google.com/file/d/1IrRMsfatyZUoh3gI5Hb_u8ltcXgR_Ke3/view?usp=drive_link',
+      page: 'data-teknis/'
+    },
+    {
+      id: 'dt-sio',
+      title: 'Surat Izin Operasi',
+      category: 'Data Teknis & Pedoman',
+      kind: 'Berkas Google Drive',
+      desc: 'Dokumen perizinan operasional resmi Bendungan Selorejo.',
+      href: 'https://drive.google.com/file/d/17eVtqXHp-fUFgsi4Ndqm9s3y28qD0Tah/view?usp=drive_link',
+      page: 'data-teknis/'
+    },
+    {
+      id: 'dt-struktur',
+      title: 'Struktur UPB Perum Jasa Tirta I',
+      category: 'Data Teknis & Pedoman',
+      kind: 'Folder Google Drive',
+      desc: 'Susunan organisasi Unit Pengelola Bendungan Selorejo Perum Jasa Tirta I.',
+      href: 'https://drive.google.com/drive/folders/130-FvLdJYaKqLRPuMXgAGcGP2VFkRs1b?usp=drive_link',
+      page: 'data-teknis/'
+    },
+    {
+      id: 'kal-2025',
+      title: 'Kalibrasi 2025',
+      category: 'Kalibrasi',
+      kind: 'Folder Google Drive',
+      desc: 'Dokumentasi dan sertifikat kalibrasi alat ukur tahun 2025.',
+      href: 'https://drive.google.com/drive/folders/1jXt9oTPnGE1XK9BLs0yJhwNx28xCbP7d?usp=drive_link',
+      page: 'kalibrasi/'
+    },
+    {
+      id: 'kal-2026',
+      title: 'Kalibrasi 2026',
+      category: 'Kalibrasi',
+      kind: 'Folder Google Drive',
+      desc: 'Dokumentasi dan sertifikat kalibrasi alat ukur tahun 2026.',
+      href: 'https://drive.google.com/drive/folders/14ZBJKe6sbucqLKw8YhVY6UP6FRiy8McZ?usp=drive_link',
+      page: 'kalibrasi/'
+    },
+    {
+      id: 'dok-drone',
+      title: 'File Drone Bendungan Selorejo',
+      category: 'Dokumentasi & Pemetaan',
+      kind: 'Folder Google Drive',
+      desc: 'Kumpulan foto dan rekaman udara dari pemantauan drone.',
+      href: 'https://drive.google.com/drive/folders/12GrfOaXFAjgKoaz8kq4eM1qn0tJv4IyU?usp=drive_link',
+      page: 'dokumentasi/'
+    },
+    {
+      id: 'dok-video',
+      title: 'File Video Kegiatan',
+      category: 'Dokumentasi & Pemetaan',
+      kind: 'Folder Google Drive',
+      desc: 'Kumpulan dokumentasi video operasional dan inspeksi lapangan.',
+      href: 'https://drive.google.com/drive/folders/1UAlo-fy9nIOtsBpi2LFz4remIamM-iPA?usp=drive_link',
+      page: 'dokumentasi/'
+    },
+    {
+      id: 'tanggul-inv',
+      title: 'Inventarisasi Tanggul Kritis dan Prasarana SDA',
+      category: 'Tanggul Kritis',
+      kind: 'Folder Google Drive',
+      desc: 'Berkas inventarisasi tanggul kritis serta prasarana sumber daya air.',
+      href: 'https://drive.google.com/drive/folders/1byvsyX0Eq68MubZcVfWHjEM45qDBdoWo?usp=drive_link',
+      page: 'inventarisasi-tanggul-kritis-dan-prasarana-sda/'
+    },
+    {
+      id: 'tanggul-longsor',
+      title: 'Identifikasi Longsoran dan Tanggul Kritis Pasca Banjir',
+      category: 'Tanggul Kritis',
+      kind: 'Folder Google Drive',
+      desc: 'Hasil identifikasi titik longsoran dan kerawanan tanggul pasca kejadian banjir.',
+      href: 'https://drive.google.com/drive/folders/1gijSc9imFa1X2cSASpn2uV1AZlJDLi3d?usp=drive_link',
+      page: 'identifikasi-longsoran-dan-tanggul-kritis-pasca-banjir/'
+    }
+  ],
+  technicalPreviewSpecs: [
+    { group: 'Karakteristik DAS & Waduk', label: 'Daerah Pengaliran Waduk', value: '2.362 km', note: 'Sesuai dokumen Data Teknis Bendungan Selorejo' },
+    { group: 'Karakteristik DAS & Waduk', label: 'Daerah Terendam (Genangan)', value: '42 km', note: 'Parameter luas genangan rancangan' },
+    { group: 'Kapasitas Tampungan Bruto', label: 'Tahun 1970 (Awal Operasi)', value: '62.300.000 m³', note: 'Batimetri awal' },
+    { group: 'Kapasitas Tampungan Bruto', label: 'Tahun 2007 (Batimetri)', value: '41.867.000 m³', note: 'Survei batimetri berkala' },
+    { group: 'Kapasitas Tampungan Bruto', label: 'Tahun 2016 (Batimetri)', value: '31.488.000 m³', note: 'Survei batimetri acuan' },
+    { group: 'Kapasitas Tampungan Efektif', label: 'Tahun 1970', value: '54.600.000 m³', note: 'Tampungan guna awal' },
+    { group: 'Kapasitas Tampungan Efektif', label: 'Tahun 2007', value: '39.835.000 m³', note: 'Survei batimetri 2007' },
+    { group: 'Kapasitas Tampungan Efektif', label: 'Tahun 2016', value: '30.677.000 m³', note: 'Survei batimetri 2016' },
+    { group: 'Elevasi Kunci Operasi', label: 'Muka Air Tinggi (HWL)', value: 'El. 622,00 m', note: 'High Water Level' },
+    { group: 'Elevasi Kunci Operasi', label: 'Muka Air Rendah (LWL)', value: 'El. 598,00 m', note: 'Low Water Level' },
+    { group: 'Elevasi Banjir Rencana', label: 'Kala Ulang Q1000 / Q200', value: 'El. 623,14 m (Q1000) · El. 622,60 m (Q200)', note: 'Muka Air Banjir Rencana' },
+    { group: 'Hidrologi & Sedimentasi', label: 'Debit Masuk Rata-Rata', value: '11 m³/det', note: 'Aliran rata-rata tahunan Sungai Konto' },
+    { group: 'Hidrologi & Sedimentasi', label: 'Debit Banjir Rencana', value: '920 m³/det (Q1000) · 680 m³/det (Q200)', note: 'Desain pelimpah utama' },
+    { group: 'Hidrologi & Sedimentasi', label: 'Erosi Lahan DAS Rencana', value: '300.000 m³/tahun (1,27 mm/tahun)', note: 'Beban sedimentasi DAS Konto' }
+  ],
+  rtowSnapshot: {
+  "sourceSpreadsheetId": "2PACX-1vQPKIL7qBY67vuCcVwwawzu-XxY9YuSzoo5dw7cUsAkbxh7iYbW3CPWR4bSqC5IE2ENtJuODmp-O8vv",
+  "fetchedAt": "2026-11-18T05:57:24.619Z",
+  "pieTitle": "Grafik Perbandingan El. Aktual dengan El. Max dan El. Min",
+  "pieData": [
+    {
+      "label": "El. Aktual / Batas Operasi",
+      "value": 614.97,
+      "formatted": "614,97",
+      "pct": 0.5606250000000017,
+      "pctText": "56,06%"
+    },
+    {
+      "label": "El. Minimum Normal (LWL)",
+      "value": 606,
+      "formatted": "606,00",
+      "pct": 0.4393749999999983,
+      "pctText": "43,94%"
+    }
+  ],
+  "rtowTitle": "RENCANA TAHUNAN OPERASI WADUK SELOREJO 2026/2027 (KONDISI NORMAL)",
+  "columns": [
+    "Col0",
+    "El. Rencana (m)",
+    "El. Aktual (m)",
+    "In. Rencana (m³/det)",
+    "In. Aktual (m³/det)",
+    "HWL (El. 622 m)",
+    "LWL Normal (El. 606 m)",
+    "LWL Siaga (El. 598 m)",
+    "BONA Atas (m)",
+    "BONA Bawah (m)",
+    "Out. Rencana (m³/det)",
+    "Out. Aktual (m³/det)"
+  ],
+  "latestActual": {
+    "periode": "Nov-1",
+    "elRencana": 611.76,
+    "elAktual": 615.37,
+    "inRencana": 7.68,
+    "inAktual": 8.03,
+    "hwl": 622,
+    "lwlNormal": 606,
+    "lwlSiaga": 598,
+    "bonaAtas": 618.0862954,
+    "bonaBawah": 611.4254402,
+    "outRencana": 9,
+    "outAktual": 7.56
+  },
+  "series": [
+    {
+      "periode": "Okt-1",
+      "elRencana": 614.95,
+      "elAktual": 617.83,
+      "inRencana": 6.32,
+      "inAktual": 6.71,
+      "hwl": 622,
+      "lwlNormal": 606,
+      "lwlSiaga": 598,
+      "bonaAtas": 618.4829181,
+      "bonaBawah": 613.5316097,
+      "outRencana": 8.5,
+      "outAktual": 8.5
+    },
+    {
+      "periode": "Okt-2",
+      "elRencana": 613.86,
+      "elAktual": 617.18,
+      "inRencana": 6.52,
+      "inAktual": 6.03,
+      "hwl": 622,
+      "lwlNormal": 606,
+      "lwlSiaga": 598,
+      "bonaAtas": 618.1863904,
+      "bonaBawah": 612.6604846,
+      "outRencana": 8.5,
+      "outAktual": 8.5
+    },
+    {
+      "periode": "Okt-3",
+      "elRencana": 612.68,
+      "elAktual": 615.8,
+      "inRencana": 6.78,
+      "inAktual": 6.43,
+      "hwl": 622,
+      "lwlNormal": 606,
+      "lwlSiaga": 598,
+      "bonaAtas": 618.0338138,
+      "bonaBawah": 611.8792229,
+      "outRencana": 8.5,
+      "outAktual": 8.5
+    },
+    {
+      "periode": "Nov-1",
+      "elRencana": 611.76,
+      "elAktual": 615.37,
+      "inRencana": 7.68,
+      "inAktual": 8.03,
+      "hwl": 622,
+      "lwlNormal": 606,
+      "lwlSiaga": 598,
+      "bonaAtas": 618.0862954,
+      "bonaBawah": 611.4254402,
+      "outRencana": 9,
+      "outAktual": 7.56
+    },
+    {
+      "periode": "Nov-2",
+      "elRencana": 611.43,
+      "elAktual": null,
+      "inRencana": 8.55,
+      "inAktual": null,
+      "hwl": 622,
+      "lwlNormal": 606,
+      "lwlSiaga": 598,
+      "bonaAtas": 618.0754625,
+      "bonaBawah": 610.4156796,
+      "outRencana": 9,
+      "outAktual": null
+    },
+    {
+      "periode": "Nov-3",
+      "elRencana": 611.76,
+      "elAktual": null,
+      "inRencana": 9.45,
+      "inAktual": null,
+      "hwl": 622,
+      "lwlNormal": 606,
+      "lwlSiaga": 598,
+      "bonaAtas": 617.9950683,
+      "bonaBawah": 610.0045191,
+      "outRencana": 9,
+      "outAktual": null
+    },
+    {
+      "periode": "Des-1",
+      "elRencana": 612.6,
+      "elAktual": null,
+      "inRencana": 10.19,
+      "inAktual": null,
+      "hwl": 622,
+      "lwlNormal": 606,
+      "lwlSiaga": 598,
+      "bonaAtas": 618.2487095,
+      "bonaBawah": 610.4203201,
+      "outRencana": 9,
+      "outAktual": null
+    },
+    {
+      "periode": "Des-2",
+      "elRencana": 613.39,
+      "elAktual": null,
+      "inRencana": 10.24,
+      "inAktual": null,
+      "hwl": 622,
+      "lwlNormal": 606,
+      "lwlSiaga": 598,
+      "bonaAtas": 618.2991953,
+      "bonaBawah": 610.4503335,
+      "outRencana": 9,
+      "outAktual": null
+    },
+    {
+      "periode": "Des-3",
+      "elRencana": 614.36,
+      "elAktual": null,
+      "inRencana": 10.5,
+      "inAktual": null,
+      "hwl": 622,
+      "lwlNormal": 606,
+      "lwlSiaga": 598,
+      "bonaAtas": 618.4083873,
+      "bonaBawah": 610.7689888,
+      "outRencana": 9,
+      "outAktual": null
+    },
+    {
+      "periode": "Jan-1",
+      "elRencana": 614.61,
+      "elAktual": null,
+      "inRencana": 12.97,
+      "inAktual": null,
+      "hwl": 622,
+      "lwlNormal": 606,
+      "lwlSiaga": 598,
+      "bonaAtas": 618.6619904,
+      "bonaBawah": 611.2201046,
+      "outRencana": 12.5,
+      "outAktual": null
+    },
+    {
+      "periode": "Jan-2",
+      "elRencana": 615.28,
+      "elAktual": null,
+      "inRencana": 13.78,
+      "inAktual": null,
+      "hwl": 622,
+      "lwlNormal": 606,
+      "lwlSiaga": 598,
+      "bonaAtas": 618.9072977,
+      "bonaBawah": 611.8146599,
+      "outRencana": 12.5,
+      "outAktual": null
+    },
+    {
+      "periode": "Jan-3",
+      "elRencana": 616.2,
+      "elAktual": null,
+      "inRencana": 16.26,
+      "inAktual": null,
+      "hwl": 622,
+      "lwlNormal": 606,
+      "lwlSiaga": 598,
+      "bonaAtas": 619.8933253,
+      "bonaBawah": 612.8543386,
+      "outRencana": 14.5,
+      "outAktual": null
+    },
+    {
+      "periode": "Feb-1",
+      "elRencana": 617.49,
+      "elAktual": null,
+      "inRencana": 17.51,
+      "inAktual": null,
+      "hwl": 622,
+      "lwlNormal": 606,
+      "lwlSiaga": 598,
+      "bonaAtas": 621.1580671,
+      "bonaBawah": 613.672726,
+      "outRencana": 14.5,
+      "outAktual": null
+    },
+    {
+      "periode": "Feb-2",
+      "elRencana": 618.15,
+      "elAktual": null,
+      "inRencana": 16.21,
+      "inAktual": null,
+      "hwl": 622,
+      "lwlNormal": 606,
+      "lwlSiaga": 598,
+      "bonaAtas": 621.910437,
+      "bonaBawah": 614.6747011,
+      "outRencana": 14.5,
+      "outAktual": null
+    },
+    {
+      "periode": "Feb-3",
+      "elRencana": 619.47,
+      "elAktual": null,
+      "inRencana": 19.2,
+      "inAktual": null,
+      "hwl": 622,
+      "lwlNormal": 606,
+      "lwlSiaga": 598,
+      "bonaAtas": 622.0012445,
+      "bonaBawah": 615.6975579,
+      "outRencana": 14.5,
+      "outAktual": null
+    },
+    {
+      "periode": "Mar-1",
+      "elRencana": 620.51,
+      "elAktual": null,
+      "inRencana": 17.81,
+      "inAktual": null,
+      "hwl": 622,
+      "lwlNormal": 606,
+      "lwlSiaga": 598,
+      "bonaAtas": 622.0012445,
+      "bonaBawah": 616.9232252,
+      "outRencana": 14.5,
+      "outAktual": null
+    },
+    {
+      "periode": "Mar-2",
+      "elRencana": 621.17,
+      "elAktual": null,
+      "inRencana": 16.75,
+      "inAktual": null,
+      "hwl": 622,
+      "lwlNormal": 606,
+      "lwlSiaga": 598,
+      "bonaAtas": 622.0012445,
+      "bonaBawah": 617.9501651,
+      "outRencana": 14.5,
+      "outAktual": null
+    },
+    {
+      "periode": "Mar-3",
+      "elRencana": 621.64,
+      "elAktual": null,
+      "inRencana": 16.08,
+      "inAktual": null,
+      "hwl": 622,
+      "lwlNormal": 606,
+      "lwlSiaga": 598,
+      "bonaAtas": 622.0012445,
+      "bonaBawah": 618.6568699,
+      "outRencana": 14.5,
+      "outAktual": null
+    },
+    {
+      "periode": "Apr-1",
+      "elRencana": 621.92,
+      "elAktual": null,
+      "inRencana": 15.52,
+      "inAktual": null,
+      "hwl": 622,
+      "lwlNormal": 606,
+      "lwlSiaga": 598,
+      "bonaAtas": 622.0012445,
+      "bonaBawah": 619.2439585,
+      "outRencana": 14.5,
+      "outAktual": null
+    },
+    {
+      "periode": "Apr-2",
+      "elRencana": 622,
+      "elAktual": null,
+      "inRencana": 14.94,
+      "inAktual": null,
+      "hwl": 622,
+      "lwlNormal": 606,
+      "lwlSiaga": 598,
+      "bonaAtas": 622.0012445,
+      "bonaBawah": 619.6913149,
+      "outRencana": 14.5,
+      "outAktual": null
+    },
+    {
+      "periode": "Apr-3",
+      "elRencana": 621.84,
+      "elAktual": null,
+      "inRencana": 13.77,
+      "inAktual": null,
+      "hwl": 622,
+      "lwlNormal": 606,
+      "lwlSiaga": 598,
+      "bonaAtas": 622.0012445,
+      "bonaBawah": 620.2187079,
+      "outRencana": 14.5,
+      "outAktual": null
+    },
+    {
+      "periode": "Mei-1",
+      "elRencana": 621.96,
+      "elAktual": null,
+      "inRencana": 12.46,
+      "inAktual": null,
+      "hwl": 622,
+      "lwlNormal": 606,
+      "lwlSiaga": 598,
+      "bonaAtas": 622.0012445,
+      "bonaBawah": 620.7360778,
+      "outRencana": 12,
+      "outAktual": null
+    },
+    {
+      "periode": "Mei-2",
+      "elRencana": 621.69,
+      "elAktual": null,
+      "inRencana": 10.99,
+      "inAktual": null,
+      "hwl": 622,
+      "lwlNormal": 606,
+      "lwlSiaga": 598,
+      "bonaAtas": 622.0012445,
+      "bonaBawah": 620.942415,
+      "outRencana": 12,
+      "outAktual": null
+    },
+    {
+      "periode": "Mei-3",
+      "elRencana": 621.85,
+      "elAktual": null,
+      "inRencana": 11.52,
+      "inAktual": null,
+      "hwl": 622,
+      "lwlNormal": 606,
+      "lwlSiaga": 598,
+      "bonaAtas": 622.0012445,
+      "bonaBawah": 620.9970813,
+      "outRencana": 11,
+      "outAktual": null
+    },
+    {
+      "periode": "Jun-1",
+      "elRencana": 621.89,
+      "elAktual": null,
+      "inRencana": 10.16,
+      "inAktual": null,
+      "hwl": 622,
+      "lwlNormal": 606,
+      "lwlSiaga": 598,
+      "bonaAtas": 622.0012445,
+      "bonaBawah": 620.8352392,
+      "outRencana": 10,
+      "outAktual": null
+    },
+    {
+      "periode": "Jun-2",
+      "elRencana": 621.77,
+      "elAktual": null,
+      "inRencana": 9.56,
+      "inAktual": null,
+      "hwl": 622,
+      "lwlNormal": 606,
+      "lwlSiaga": 598,
+      "bonaAtas": 621.9836792,
+      "bonaBawah": 620.5276341,
+      "outRencana": 10,
+      "outAktual": null
+    },
+    {
+      "periode": "Jun-3",
+      "elRencana": 621.64,
+      "elAktual": null,
+      "inRencana": 9.51,
+      "inAktual": null,
+      "hwl": 622,
+      "lwlNormal": 606,
+      "lwlSiaga": 598,
+      "bonaAtas": 621.9427077,
+      "bonaBawah": 620.0684477,
+      "outRencana": 10,
+      "outAktual": null
+    },
+    {
+      "periode": "Jul-1",
+      "elRencana": 621.36,
+      "elAktual": null,
+      "inRencana": 8.99,
+      "inAktual": null,
+      "hwl": 622,
+      "lwlNormal": 606,
+      "lwlSiaga": 598,
+      "bonaAtas": 621.9000657,
+      "bonaBawah": 619.6139574,
+      "outRencana": 10,
+      "outAktual": null
+    },
+    {
+      "periode": "Jul-2",
+      "elRencana": 620.97,
+      "elAktual": null,
+      "inRencana": 8.62,
+      "inAktual": null,
+      "hwl": 622,
+      "lwlNormal": 606,
+      "lwlSiaga": 598,
+      "bonaAtas": 621.8154318,
+      "bonaBawah": 619.2543667,
+      "outRencana": 10,
+      "outAktual": null
+    },
+    {
+      "periode": "Jul-3",
+      "elRencana": 620.32,
+      "elAktual": null,
+      "inRencana": 8.01,
+      "inAktual": null,
+      "hwl": 622,
+      "lwlNormal": 606,
+      "lwlSiaga": 598,
+      "bonaAtas": 621.5663385,
+      "bonaBawah": 618.6824555,
+      "outRencana": 10,
+      "outAktual": null
+    },
+    {
+      "periode": "Agu-1",
+      "elRencana": 619.8,
+      "elAktual": null,
+      "inRencana": 7.83,
+      "inAktual": null,
+      "hwl": 622,
+      "lwlNormal": 606,
+      "lwlSiaga": 598,
+      "bonaAtas": 621.2287562,
+      "bonaBawah": 618.0211699,
+      "outRencana": 9.5,
+      "outAktual": null
+    },
+    {
+      "periode": "Agu-2",
+      "elRencana": 619.27,
+      "elAktual": null,
+      "inRencana": 7.9,
+      "inAktual": null,
+      "hwl": 622,
+      "lwlNormal": 606,
+      "lwlSiaga": 598,
+      "bonaAtas": 620.8108779,
+      "bonaBawah": 617.4208388,
+      "outRencana": 9.5,
+      "outAktual": null
+    },
+    {
+      "periode": "Agu-3",
+      "elRencana": 618.6,
+      "elAktual": null,
+      "inRencana": 7.74,
+      "inAktual": null,
+      "hwl": 622,
+      "lwlNormal": 606,
+      "lwlSiaga": 598,
+      "bonaAtas": 620.3265131,
+      "bonaBawah": 616.7113273,
+      "outRencana": 9.5,
+      "outAktual": null
+    },
+    {
+      "periode": "Sep-1",
+      "elRencana": 618.01,
+      "elAktual": null,
+      "inRencana": 7.4,
+      "inAktual": null,
+      "hwl": 622,
+      "lwlNormal": 606,
+      "lwlSiaga": 598,
+      "bonaAtas": 619.8207855,
+      "bonaBawah": 615.9657126,
+      "outRencana": 9,
+      "outAktual": null
+    },
+    {
+      "periode": "Sep-2",
+      "elRencana": 617.43,
+      "elAktual": null,
+      "inRencana": 7.5,
+      "inAktual": null,
+      "hwl": 622,
+      "lwlNormal": 606,
+      "lwlSiaga": 598,
+      "bonaAtas": 619.3192932,
+      "bonaBawah": 615.1940047,
+      "outRencana": 9,
+      "outAktual": null
+    },
+    {
+      "periode": "Sep-3",
+      "elRencana": 616.66,
+      "elAktual": null,
+      "inRencana": 7.18,
+      "inAktual": null,
+      "hwl": 622,
+      "lwlNormal": 606,
+      "lwlSiaga": 598,
+      "bonaAtas": 618.8124835,
+      "bonaBawah": 614.3781095,
+      "outRencana": 9,
+      "outAktual": null
+    }
+  ]
+}
+};
